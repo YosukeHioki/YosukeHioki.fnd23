@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<title>自作計算機</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#000000">
+	<link rel="stylesheet" type="text/css" href="calculator.css" />
+	<script type="text/javascript" src="calculator.js" async></script><!-- async がないと head タグ内で機能しない-->
+</head>
+
+<body>
+	<div class="outer"><!--電卓の外側-->
+		<div class="inner"><!--電卓の本体-->
+			<div class="display"><!--電卓の画面-->
+				<input type="text" id="result" placeholder="0" disabled>
+			</div>
+			<div class="button"><!--電卓のボタン-->
+				<button onclick="clearResult()">AC</button>
+				<button onclick="insert('(')">（</button>
+				<button onclick="insert(')')">）</button>
+				<button onclick="insert('/')">÷</button>
+				<button onclick="insert('7')">７</button>
+				<button onclick="insert('8')">８</button>
+				<button onclick="insert('9')">９</button>
+				<button onclick="insert('*')">×</button>
+				<button onclick="insert('4')">４</button>
+				<button onclick="insert('5')">５</button>
+				<button onclick="insert('6')">６</button>
+				<button onclick="insert('-')">－</button>
+				<button onclick="insert('1')">１</button>
+				<button onclick="insert('2')">２</button>
+				<button onclick="insert('3')">３</button>
+				<button onclick="insert('+')">＋</button>
+				<button onclick="insert('0')">０</button>
+				<button onclick="insert('.')">.</button>
+				<button onclick="clearOneValue()">C</button>
+				<button onclick="calculateResult()">=</button>
+			</div>
+		</div>
+	</div>
+	
+	<br>
+	<br>
+	<hr>
+	<br>
+	<br>
+	
+	<h4><a href="select-page.html">ページ選択画面に戻る</a></h4>
+	
+</body>
+
+</html>
+
+
+
+<!--■分かったこと-->
+<!--・ script タグは async を記述するか body タグの末尾にタグを持ってこないと機能しない-->
+<!--・ .getElementById('') でアクセスするのはディスプレイ部分のみ、あとは関数でアクセス-->
