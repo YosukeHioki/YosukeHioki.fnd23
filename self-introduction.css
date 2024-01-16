@@ -3,7 +3,7 @@ body {
 }
 
 .background {
-    background-image: url(./picture/背景_花さじき.jpg);
+    background-image: url("https://github.com/YosukeHioki/YosukeHioki.fnd23/blob/main/%E8%83%8C%E6%99%AF_%E8%8A%B1%E3%81%95%E3%81%98%E3%81%8D.jpg?raw=true");
     background-color: rgba(255, 255, 255, 0.5);
     background-blend-mode: lighten;
     background-size: cover;
