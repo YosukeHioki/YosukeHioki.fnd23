@@ -42,7 +42,7 @@ function insert(any) {
 
 //4.[=]ボタンの処理
 function calculateResult() {
-    if (result.value === "") {//空の時"undefined"が出るバグ修正
+    if (result.value === "") {//ディスプレイが空の時"undefined"が出るバグ修正
         return result.value = "";
     } else {
         return result.value = eval(result.value);
@@ -77,13 +77,13 @@ equal.addEventListener("click", releaseAGator);
 
 //7.ワニ捕獲
 function captureAGator() {
-    if (areaOfGator.innerText = "🐊") {
+    if (areaOfGator.innerText === "🐊") {
+        window.alert("ワニが帰っていきます！")
         areaOfGator.style.fontSize = "15px";
         areaOfGator.innerText = "待機中..."
     }
-    window.alert("ワニが帰っていきます！")
-    return areaOfGator.innerText;
 }
+
 
 capture.addEventListener("click", captureAGator);
 
