@@ -18,8 +18,8 @@ function test(actual, expected) {
 
 //1.計算式をディスプレイに表示する
 
-let result = document.getElementById('result');
-result.value = ""; 
+const result = document.getElementById("result");
+result.value = "";
 
 
 //2.[AC]ボタンの処理
@@ -39,11 +39,15 @@ function insert(any) {
 // test(insert("*"), "3*");//OK
 // test(insert("8"), "3*8");//OK
 
+
 //4.[=]ボタンの処理
 function calculateResult() {
-    return result.value = eval(result.value);
+    if (result.value === "") {//空の時"undefined"が出るバグ修正
+        return result.value = "";
+    } else {
+        return result.value = eval(result.value);
+    }
 }
-
 // test(calculateResult(), 24);//OK,ここで初めて計算され、結果が数値型になる
 
 
@@ -56,6 +60,32 @@ function clearOneValue() {
 
 // test(clearOneValue(), "2");OK
 
+
+//6.ワニ放出
+const areaOfGator = document.getElementById("area-of-gator")
+function releaseAGator() {
+    if (result.value.indexOf("02") !== -1) {
+        window.alert("ワニの登場です！");
+        areaOfGator.style.fontSize = "40px";
+        areaOfGator.innerText = "🐊";
+    }
+}
+
+const equal = document.getElementById("release-gator");
+equal.addEventListener("click", releaseAGator);
+
+
+//7.ワニ捕獲
+function captureAGator() {
+    if (areaOfGator.innerText = "🐊") {
+        areaOfGator.style.fontSize = "15px";
+        areaOfGator.innerText = "待機中..."
+    }
+    window.alert("ワニが帰っていきます！")
+    return areaOfGator.innerText;
+}
+
+capture.addEventListener("click", captureAGator);
 
 
 //■分かったこと
