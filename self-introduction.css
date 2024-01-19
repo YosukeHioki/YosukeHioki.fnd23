@@ -39,14 +39,20 @@ body {
     font-weight: bold;
 }
 
+.outer-of-comment{
+    margin: auto;
+    width: 1300px;
+}
+
 .comment {
     margin: auto;
-    text-align: center;
     width: 73%;
+    text-align: left;
     font-size: 22px;
-    font-weight:900;
+    font-weight: 900;
     line-height: 180%;
 }
+
 
 .picture-list-title,
 .video-list-title {
