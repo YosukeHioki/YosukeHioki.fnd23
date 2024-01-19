@@ -4,21 +4,21 @@
     display: flex;
     justify-content: center;
     align-items: stretch;
-    height: 450px;
+    height: 400px;
     background-color: lightslategray
 }
 
-.inner {
+.body {
+    height: 440px;
     border: 7px solid white;
     background-color: whitesmoke;
-    border-radius: 15px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
 }
 
 .display {
     width: 270px;
     padding: 10px;
-    margin: 20px 20px 30px;
+    margin: 30px 20px 30px;
     border-radius: 10px;
     background-color: lightgray;
 }
@@ -48,7 +48,7 @@ button {
     color: black;
     padding: 10px 20px;
     font-size: 20px;
-    border: none;
+    border:100px darkslategrey;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -56,10 +56,28 @@ button {
 button:hover {
     background-color: cornflowerblue;
     color: white;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.15s ease-in-out;
 }
 
+.outer-of-area {
+    padding: 30px;
+    background-color: lightslategray;
+}
 
+#area-of-gator {
+    font-size: 15px;
+    text-align: center;
+    margin: 1px auto 30px;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    background-color: lightblue;
+    border-radius: 30px;
+}
+
+.back-to-select-page{
+    font-size: 25px;
+}
 
 /*■分かったこと
 ・ディスプレイの表示を右詰めにするには .display ではなく .display input で text-align を right に指定
