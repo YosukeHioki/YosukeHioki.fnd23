@@ -2,7 +2,7 @@
 <html lang="ja">
 
 <head>
-	<title>自作計算機</title>
+	<title>計算機02</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="theme-color" content="#000000">
@@ -11,13 +11,13 @@
 </head>
 
 <body>
-	<div class="outer"><!--計算機の外側-->
-		<div class="inner"><!--計算機の本体-->
-			<div class="display"><!--計算機の画面-->
+	<div class="outer"><!--電卓の外側-->
+		<div class="body"><!--電卓の本体-->
+			<div class="display"><!--電卓の画面-->
 				<input type="text" id="result" placeholder="0" disabled>
 			</div>
-			<div class="button"><!--計算機のボタン-->
-				<button onclick="clearResult()">AC</button>
+			<div class="button"><!--電卓のボタン-->
+				<button onclick="clearResult()" id="capture">AC</button>
 				<button onclick="insert('(')">（</button>
 				<button onclick="insert(')')">）</button>
 				<button onclick="insert('/')">÷</button>
@@ -36,19 +36,23 @@
 				<button onclick="insert('0')">０</button>
 				<button onclick="insert('.')">.</button>
 				<button onclick="clearOneValue()">C</button>
-				<button onclick="calculateResult()">=</button>
+				<button onclick="calculateResult()" id="release-gator">=</button>
 			</div>
 		</div>
 	</div>
-	
+	<div class="outer-of-area">
+		<div id="area-of-gator">
+			待機中...
+		</div>
+	</div>
+
+
 	<br>
 	<br>
 	<hr>
-	<br>
-	<br>
-	
-	<h4><a href="index.html">ページ選択画面に戻る</a></h4>
-	
+
+	<h4 class="back-to-select-page"><a href="select-page.html">ページ選択画面に戻る</a></h4>
+
 </body>
 
 </html>
