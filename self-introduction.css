@@ -62,10 +62,9 @@ body {
 }
 
 .title-of-picture{
-    
-        width:100%;
-        height:auto;
-        position: relative;
+    width:100%;
+    height:auto;
+    position: relative;
 }   
 
 .picture-list img {
